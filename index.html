@@ -1,0 +1,244 @@
+<!--#set var="PageTitle" value="T2T Annotation" -->
+<!--#include virtual="header.shtml" -->
+<div id="mainContent">
+<p>
+<h2><center>T2T consortium annotation of the CHM13 genome</center></h2>
+<p>
+  The T2T consortium's annotation of the CHM13 genome, as published in the original paper and updated
+  since, is available at <a href="https://github.com/marbl/CHM13">the T2T consortium's assembly and annotation site, here</a>. A direct link to the current annotation file <a href="https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/CHM13/assemblies/annotation/chm13v2.0_RefSeq_Liftoff_v5.3.gff.gz">is here</a>.
+  
+  As of September 2025, the latest annotation is version 5.3, which fixes many small issues in earlier releases,
+  including mapping errors caused by errors in the GRCh38 annotation, off-by-1 errors in some splice sites, special character issues in the original RefSeq annotation, and more. 
+<p> <p>
+
+This annotation was originally created by using the Liftoff program [1];
+(v1.6.3, with options -copies -sc 0.95 -polish -exclude_partial
+-chroms) to map all human genes in the RefSeq [2]
+annotation release 110 from the GRCh38.p14 genome to the CHM13v2.0
+genome, a complete, gap-free human genome published by the
+Telomere-to-Telomere (T2T) consortium [3].
+
+Later releases have involved custom programs that fixed systematic mapping
+errors as well as manual curation of some genes.
+
+<p><p>
+
+    The initial Liftoff process, described in the 2022 human genome paper [3],
+    can be summarized as follows. Of the 58,700 genes (19,871 protein coding) and 179,372 transcripts
+(130,361 protein coding) annotated on the main chromosomes and
+unplaced contigs in GRCh38, we successfully lifted over 58,272 genes
+(19,767 protein coding) and 178,688 transcripts (130,426 protein
+coding).  We also used the "-copies" option in Liftoff to identify
+additional gene copies in CHM13, using a minimum sequence identity
+threshold of 95% at the DNA level. With this threshold, we found 2,393
+additional gene copies (239 protein coding). Finally, we added the
+ribosomal DNA (rDNA) annotations on the acrocentric chromosomes from
+the CHM13v2.0 annotation, which were created using the Comparative
+Annotation Toolkit (CAT) [4]; and Liftoff. These steps resulted
+in a total gene count of 61,322 (20,006 protein coding) and a total
+    transcript count of 181,715 (130,426 protein coding).
+
+    The table below
+    shows the number of genes of each biotype in GRCh38 and CHM13 <em>from
+    the 2022 annotation</em>. These numbers have changed in subsequent updates;
+    e.g., the v5.3 annotation has 20,064 protein-coding genes and 61,342
+    total genes. See the release notes for more details on each version.
+
+<p><p>
+<style>
+table {
+	  font-family: arial, sans-serif;
+	    border-collapse: collapse;
+	      width: 100%;
+}
+
+td, th {
+	  border: 1px solid #dddddd;
+	    text-align: center;
+	      padding: 8px;
+}
+
+tr:nth-child(even) {
+	  background-color: #dddddd;
+}
+</style>
+<table>
+ <tr>
+  <th>Gene biotype</th>
+  <th>Number of genes in GRCh38</th>
+  <th>Number of genes on CHM13 (v5.1) </th>
+ </tr>
+ <tr>
+  <td>protein coding</td>
+  <td>19871</td>
+  <td>20006</td>
+ </tr>
+ <tr>
+  <td>lncRNA</td>
+  <td>17793</td>
+  <td>18389</td>
+ </tr>
+ <tr>
+  <td>pseudogene</td>
+  <td>15357</td>
+  <td>16030</td>
+ </tr>
+ <tr>
+  <td>miRNA</td>
+  <td>1914</td>
+  <td>2047</td>
+ </tr>
+ <tr>
+  <td>transcribed pseudogene</td>
+  <td>1221</td>
+  <td>1262</td>
+ </tr>
+ <tr>
+  <td>snoRNA</td>
+  <td>1195</td>
+  <td>1188</td>
+ </tr>
+ <tr>
+  <td>tRNA</td>
+  <td>431</td>
+  <td>522</td>
+ </tr>
+ <tr>
+  <td>V segment</td>
+  <td>239</td>
+  <td>245</td>
+ </tr>
+ <tr>
+  <td>V segment pseudogene</td>
+  <td>189</td>
+  <td>209</td>
+ </tr>
+ <tr>
+  <td>snRNA</td>
+  <td>153</td>
+  <td>192</td>
+ </tr>
+ <tr>
+  <td>J segment</td>
+  <td>98</td>
+  <td>79</td>
+ </tr>
+ <tr>
+  <td>ncRNA</td>
+  <td>51</td>
+  <td>49</td>
+ </tr>
+<tr>
+  <td>rRNA</td>
+  <td>38</td>
+  <td>325</td>
+</tr>
+ <tr>
+  <td>misc RNA</td>
+  <td>36</td>
+  <td>37</td>
+ </tr>
+ <tr>
+  <td>D segment</td>
+  <td>32</td>
+  <td>0</td>
+ </tr>
+ <tr>
+  <td>C region</td>
+  <td>21</td>
+  <td>23</td>
+ </tr>
+ <tr>
+  <td>antisense RNA</td>
+  <td>19</td>
+  <td>19</td>
+ </tr>
+ <tr>
+  <td>other</td>
+  <td>14</td>
+  <td>13</td>
+ </tr>
+ <tr>
+  <td>J segment pseudogene</td>
+  <td>7</td>
+  <td>6</td>
+ </tr>
+ <tr>
+  <td>C region pseudogene</td>
+  <td>5</td>
+  <td>5</td>
+ </tr>
+ <tr>
+  <td>Y RNA</td>
+  <td>4</td>
+  <td>7</td>
+ </tr>
+ <tr>
+  <td>vault RNA</td>
+  <td>4</td>
+  <td>4</td>
+ </tr>
+ <tr>
+  <td>scRNA</td>
+  <td>4</td>
+  <td>4</td>
+ </tr>
+ <tr>
+  <td>telomerase RNA</td>
+  <td>1</td>
+  <td>1</td>
+ </tr>
+ <tr>
+  <td>RNase P RNA</td>
+  <td>1</td>
+  <td>1</td>
+ </tr>
+ <tr>
+  <td>RNase MRP RNA</td>
+  <td>1</td>
+  <td>1</td>
+ </tr>
+ <tr>
+  <td>ncRNA pseudogene</td>
+  <td>1</td>
+  <td>1</td>
+ </tr>
+ <tr>
+  <th>Total</th>
+  <th>58700</th>
+  <th>60655</th>
+</table>
+<p><p><p><p> 
+A comparison of the genes (from v5.1) using gene IDs to match annotations is shown in the figure below. Genes were compared between RefSeq v110 on GRCh38, the Liftoff version of RefSeq on CHM13, and the NCBI version of RefSeq on CHM13. The NCBI version, shown in blue, was produced using the Gnomon pipeline, which only mapped approximately half of the protein coding genes.
+    
+<div>
+<div class="image">
+   <img src="refseq_liftoff_comparisons_v2.webp"
+       style="max-width: 100%;" />
+</div>
+</div>
+<div><strong>Figure</strong>: Venn diagrams showing the overlaps between the RefSeq annotation of GRCh38
+  (yellow), the RefSeq annotation of CHM13 produced here by Liftoff (red), and the NCBI
+  RefSeq annotation produced internally at NCBI (blue) using the Gnomon pipeline. The
+  large orange regions show the near-complete overlap between our RefSeq annotation (Liftoff-based)
+  and the GRCh38 annotation.
+</div>
+</div>
+<br>
+
+
+<p><p>
+    
+1.    Shumate, A. & Salzberg, S. L. Liftoff: accurate mapping of gene annotations. <em>Bioinformatics</em> 37, 1639–1643 (2021).
+<p>
+2.    O’Leary, N. A. <em>et al.</em> Reference sequence (RefSeq) database at NCBI: current status, taxonomic expansion, and functional annotation.<em> Nucleic Acids Res</em> 44, D733–D745 (2016).
+<p>
+3.    Nurk, S. <em>et al.</em> The complete sequence of a human genome. <em>Science</em> (1979) 376, 44–53 (2022).
+<p>
+4.    Fiddes, I. T.<em> et al.</em> Comparative Annotation Toolkit (CAT)-simultaneous clade and personal genome annotation. <em>Genome Research</em> 28, 1029–1038 (2018).
+<p>
+
+  
+</div>
+</div> <!-- end of #mainContent -->
+<!--#include virtual="footer.html" -->
