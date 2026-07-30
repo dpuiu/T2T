@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use Liftoff, please cite the following publication."
 title: "Liftoff: accurate mapping of gene annotations"
-type: article
+type: software
 
 authors:
   - family-names: "Shumate"
@@ -9,15 +9,20 @@ authors:
   - family-names: "Salzberg"
     given-names: "Steven L."
 
-journal: "Bioinformatics"
-year: 2021
-volume: 37
-issue: 12
-start: 1639
-end: 1643
+repository-code: "https://github.com/agshumate/Liftoff"
 
-doi: 10.1093/bioinformatics/btaa1016
-
-url: https://doi.org/10.1093/bioinformatics/btaa1016
-
-license: "Oxford University Press"
+preferred-citation:
+  type: article
+  title: "Liftoff: accurate mapping of gene annotations"
+  authors:
+    - family-names: "Shumate"
+      given-names: "Adam"
+    - family-names: "Salzberg"
+      given-names: "Steven L."
+  journal: "Bioinformatics"
+  year: 2021
+  volume: 37
+  issue: 12
+  start: 1639
+  end: 1643
+  doi: "10.1093/bioinformatics/btaa1016"
