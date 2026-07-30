@@ -6,5 +6,5 @@ Available at https://salzberg-lab.github.io/T2T/
 
 ## Publication 
 
-Shumate, A. & Salzberg, S. L. Liftoff: accurate mapping of gene annotations. Bioinformatics 37, 1639–1643 (2021).
+PubMed: [https://pubmed.ncbi.nlm.nih.gov/33320174/](Shumate, A. & Salzberg, S. L. Liftoff: accurate mapping of gene annotations. Bioinformatics 37, 1639–1643 (2021)).
 
